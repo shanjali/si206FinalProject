@@ -1,6 +1,6 @@
 # si206FinalProject
 
-How to Use:
+# How to Use:
 
 Download “charts.csv”
 Open “SI206FinalProject.py”
