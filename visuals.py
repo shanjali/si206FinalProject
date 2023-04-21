@@ -45,3 +45,37 @@ def double_bar(data):
     plt.close()
 
 double_bar(processed)
+
+def process_youtube(filename):
+    engagement = []
+    views = []
+
+    inFile = open(filename, "r")
+    csv_file = csv.reader(inFile)
+
+    headers = next(csv_file)
+
+    for row in csv_file:
+        view = float(row[2])
+        likes = float(row[3])
+        comments = float(row[5])
+        engage = ((likes + comments) / view) * 100
+        views.append(view)
+        engagement.append(engage)
+
+    return (views, engagement)
+
+y_data = process_youtube("youtube.csv")
+
+def scatter(data):
+    x = data[0]
+    y = data[1]
+
+    plt.scatter(y, x, c="red", edgecolors="black")
+    plt.xlabel("Engagement")
+    plt.ylabel("Number of Views")
+    plt.title("Engagement vs. Number of Views for Music Videos")
+    plt.savefig("engage_vs_views.png")
+    plt.show()
+
+scatter(y_data)
