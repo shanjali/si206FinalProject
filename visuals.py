@@ -34,22 +34,14 @@ def double_bar(data):
 
     ax[0,] = plt.subplot(121)
     ax[0].barh(X, Y_pop, align='center', color='green', edgecolor='black')
+    ax[0].title.set_text("Spotify Popularity")
   
     ax[1] = plt.subplot(122, sharey=ax[0])
     ax[1].barh(X, Y_eng, align='center', color='red', edgecolor='black')
+    ax[1].title.set_text("Youtube Engagement")
         
     plt.savefig("double_bar.png")
     plt.show()  
     plt.close()
 
 double_bar(processed)
-
-#plt.bar(x_axis - 0.2, Y_pop, 0.4, label = 'Spotify Popularity')
- #   plt.bar(x_axis + 0.2, Y_eng, 0.4, label = 'Youtube Engagement')
-  
-  #  plt.xticks(x_axis + 0.25/2, X)
-   # plt.xlabel("Songs")
-    #plt.ylabel("Metric")
-    #plt.title("Spotify Popularity vs. Youtube Engagement")
-    #plt.legend()
-    #plt.show()
