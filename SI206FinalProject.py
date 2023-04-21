@@ -68,7 +68,7 @@ def get_track_ids(song_names):
     return track_ids
 
 listofsong = ["Unwritten", "You Belong With Me", "Death by a Thousand Cuts", "All too well", "Dress", "Midnight Rain"]
-#print(get_track_ids(read_in_top_songs()))
+print(get_track_ids(read_in_top_songs()))
 
 def get_popularity_score(idlist):
     base_url = "https://api.spotify.com/v1/tracks/{id}"
@@ -86,8 +86,8 @@ def get_popularity_score(idlist):
             count += 1
 
 
-#early = get_track_ids(read_in_top_songs())
-#get_popularity_score(early)
+early = get_track_ids(read_in_top_songs())
+get_popularity_score(early)
 
 
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
@@ -203,7 +203,7 @@ def create_Spotify_db():
         # Close the database connection
         conn.close()
 
-#create_Spotify_db()
+create_Spotify_db()
 
 def create_Youtube_db():
 
@@ -237,7 +237,7 @@ def create_Youtube_db():
         # Close the database connection
         conn.close()
  
-#create_Youtube_db()
+create_Youtube_db()
 
 
 
